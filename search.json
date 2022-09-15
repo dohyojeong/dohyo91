@@ -4,27 +4,34 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "My research topic is on Public Health Policy, Machine Learning, Geographic Information Science."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Research Blog",
     "section": "",
-    "text": "news\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nSep 14, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nSep 11, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "RStudio\n\n\nVisualization\n\n\n\n\n\n\n\n\n\n\n\nSep 14, 2022\n\n\nDohyo Jeong\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nText Mining\n\n\nHealth Policy\n\n\n\n\n\n\n\n\n\n\n\nSep 1, 2022\n\n\nDohyo Jeong\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nArcGIS\n\n\nHealth Policy\n\n\n\n\n\n\n\n\n\n\n\nJun 30, 2022\n\n\nDohyo Jeong\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/Data Visualization/index.html",
+    "href": "posts/Data Visualization/index.html",
+    "title": "Data Visualization",
     "section": "",
     "text": "1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/Digital Mass Hysteria over COVID-19 vaccine/index.html",
+    "href": "posts/Digital Mass Hysteria over COVID-19 vaccine/index.html",
+    "title": "Digital Mass Hysteria over COVID-19 vaccine",
     "section": "",
-    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "Coming soon…"
+  },
+  {
+    "objectID": "posts/Tuberculosis Case Mapping/index.html",
+    "href": "posts/Tuberculosis Case Mapping/index.html",
+    "title": "Tuberculosis Case Mapping",
+    "section": "",
+    "text": "Coming soon…"
   }
 ]

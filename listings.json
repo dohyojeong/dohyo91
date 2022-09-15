@@ -2,8 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/posts/Data Visualization/index.html",
+      "/posts/Digital Mass Hysteria over COVID-19 vaccine/index.html",
+      "/posts/Tuberculosis Case Mapping/index.html"
     ]
   }
 ]
