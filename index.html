@@ -161,8 +161,33 @@ ul.task-list{list-style: none;}
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RStudio,Visualization" data-listing-date-sort="1663909200000" data-listing-file-modified-sort="1663954565700" data-listing-reading-time-sort="2.16">
+<div class="quarto-post image-right" data-index="0" data-categories="RStudio,Visualization" data-listing-date-sort="1663909200000" data-listing-file-modified-sort="1664292909618" data-listing-reading-time-sort="2.12">
 <div class="thumbnail">
 <p><a href="./posts/Compare the regression models/index.html"> <img src="./posts/Compare the regression models/ggplot_hpi.jpeg" class="thumnail-image"> </a></p>
 </div>

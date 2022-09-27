@@ -202,9 +202,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <p>Data Visualization Assignment 3.</p>
-<ul>
-<li>Compare the regression models</li>
-</ul>
+<section id="compare-the-regression-models" class="level3">
+<h3 class="anchored" data-anchor-id="compare-the-regression-models">Compare the regression models</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Data Visualization</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Sept 21 2022</span></span>
@@ -313,41 +312,43 @@ x4          0.4999091  0.1178189 4.243028 0.002164602</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(op)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<ul>
-<li>Example of Overfitting with Finetune</li>
-</ul>
+</section>
+<section id="example-of-overfitting-with-finetune" class="level3">
+<h3 class="anchored" data-anchor-id="example-of-overfitting-with-finetune">Example of Overfitting with Finetune</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">2</span>, <span class="at">by =</span> <span class="fl">0.025</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">5</span> <span class="sc">+</span> <span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">100</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">3</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="fu">length</span>(x), <span class="dv">0</span>, <span class="dv">50</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> x<span class="sc">^</span><span class="dv">3</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> x<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>linearmodel <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x) <span class="co">#model fitting</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2022</span>)</span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>testx <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">1.1</span>, <span class="fl">1.5</span>, <span class="at">by =</span> <span class="fl">0.025</span>)</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>testy <span class="ot">&lt;-</span> <span class="dv">5</span> <span class="sc">+</span> <span class="dv">3</span><span class="sc">*</span>testx<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">100</span><span class="sc">*</span>(testx)<span class="sc">^</span><span class="dv">3</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="fu">length</span>(testx), <span class="dv">0</span>, <span class="dv">20</span>)</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>predict_linear <span class="ot">&lt;-</span> <span class="fu">predict</span>(linearmodel, <span class="fu">list</span>(<span class="at">x=</span> testx)) <span class="co">#prediction on test data set</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>quadraticmodel <span class="ot">&lt;-</span> <span class="fu">lm</span>(y<span class="sc">~</span> x <span class="sc">+</span> z) <span class="co">#fitting</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>predict_quadratic <span class="ot">=</span> <span class="fu">predict</span>(quadraticmodel, <span class="fu">list</span>(<span class="at">x =</span> testx, <span class="at">z =</span> testx<span class="sc">^</span><span class="dv">2</span>)) <span class="co">#prediction on test data set</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>smoothspline <span class="ot">&lt;-</span> <span class="fu">smooth.spline</span>(x,y,<span class="at">df =</span> <span class="dv">40</span>) <span class="co">#fitting </span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>predict_spline <span class="ot">&lt;-</span> <span class="fu">predict</span>(smoothspline, testx)<span class="sc">$</span>y <span class="co">#prediction on test data set</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(x), <span class="fu">max</span>(x), <span class="at">by =</span> <span class="fl">0.001</span>)</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>predict <span class="ot">&lt;-</span> <span class="fu">predict</span>(quadraticmodel, <span class="fu">list</span>(<span class="at">x =</span> seq, <span class="at">z =</span> seq<span class="sc">^</span><span class="dv">2</span>))</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y, <span class="at">xlab =</span> <span class="st">"X"</span>, <span class="at">ylab =</span> <span class="st">"Y"</span>, <span class="at">main =</span> <span class="st">"Example of Overfitting with finetune"</span> )</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(linearmodel, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="dv">1</span>)</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(seq,predict, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(smoothspline, <span class="at">col =</span> <span class="st">"green"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>linearmodel <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x) <span class="co">#model fitting</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>testx <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">1.1</span>, <span class="fl">1.5</span>, <span class="at">by =</span> <span class="fl">0.025</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>testy <span class="ot">&lt;-</span> <span class="dv">5</span> <span class="sc">+</span> <span class="dv">3</span><span class="sc">*</span>testx<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">100</span><span class="sc">*</span>(testx)<span class="sc">^</span><span class="dv">3</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="fu">length</span>(testx), <span class="dv">0</span>, <span class="dv">20</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>predict_linear <span class="ot">&lt;-</span> <span class="fu">predict</span>(linearmodel, <span class="fu">list</span>(<span class="at">x=</span> testx)) <span class="co">#prediction on test data set</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>quadraticmodel <span class="ot">&lt;-</span> <span class="fu">lm</span>(y<span class="sc">~</span> x <span class="sc">+</span> z) <span class="co">#fitting</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>predict_quadratic <span class="ot">=</span> <span class="fu">predict</span>(quadraticmodel, <span class="fu">list</span>(<span class="at">x =</span> testx, <span class="at">z =</span> testx<span class="sc">^</span><span class="dv">2</span>)) <span class="co">#prediction on test data set</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>smoothspline <span class="ot">&lt;-</span> <span class="fu">smooth.spline</span>(x,y,<span class="at">df =</span> <span class="dv">50</span>) <span class="co">#fitting </span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>predict_spline <span class="ot">&lt;-</span> <span class="fu">predict</span>(smoothspline, testx)<span class="sc">$</span>y <span class="co">#prediction on test data set</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(x), <span class="fu">max</span>(x), <span class="at">by =</span> <span class="fl">0.001</span>)</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>predict <span class="ot">&lt;-</span> <span class="fu">predict</span>(quadraticmodel, <span class="fu">list</span>(<span class="at">x =</span> seq, <span class="at">z =</span> seq<span class="sc">^</span><span class="dv">2</span>))</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y, <span class="at">xlab =</span> <span class="st">"X"</span>, <span class="at">ylab =</span> <span class="st">"Y"</span>, <span class="at">main =</span> <span class="st">"Example of Overfitting with finetune"</span> )</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(linearmodel, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="dv">1</span>)</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(seq,predict, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(smoothspline, <span class="at">col =</span> <span class="st">"green"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<ul>
-<li>Happy Planet Index with ggplot</li>
-</ul>
+</section>
+<section id="happy-planet-index-with-ggplot" class="level3">
+<h3 class="anchored" data-anchor-id="happy-planet-index-with-ggplot">Happy Planet Index with ggplot</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>hpi <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"HPI_GDP.csv"</span>)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -411,6 +412,7 @@ x dplyr::lag()    masks stats::lag()</code></pre>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
