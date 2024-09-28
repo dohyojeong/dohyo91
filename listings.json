@@ -2,16 +2,15 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/Attacks on Healthcare/index.html",
-      "/posts/Comparison of Response policy to COVID-19/index.html",
-      "/posts/Covid19 and Educational Polarization/index.html",
-      "/posts/Digital Mass Hysteria over COVID-19 vaccine/index.html",
       "/posts/Emergency Medical Services/index.html",
       "/posts/Health Expenditure/index.html",
-      "/posts/Regional Disparity in Uninsurance Rate/index.html",
-      "/posts/Road Traffic Crashes and Ambulance Responses/index.html",
+      "/posts/Digital Mass Hysteria over COVID-19 vaccine/index.html",
       "/posts/TB Treatment Facility Distribution and Accessibility/index.html",
-      "/posts/Tuberculosis Case Mapping/index.html"
+      "/posts/Covid19 and Educational Polarization/index.html",
+      "/posts/Road Traffic Crashes and Ambulance Responses/index.html",
+      "/posts/Tuberculosis Case Mapping/index.html",
+      "/posts/Regional Disparity in Uninsurance Rate/index.html",
+      "/posts/Comparison of Response policy to COVID-19/index.html"
     ]
   }
 ]

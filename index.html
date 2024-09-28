@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -152,10 +152,9 @@ window.Quarto = {
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://dohyojeong.github.io/"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="https://dohyojeong.github.io/"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://www.linkedin.com/in/dohyo-jeong-683595227/"> <i class="bi bi-linkedin" role="img">
@@ -196,7 +195,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Health Disparity">Health Disparity <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Machine Learning">Machine Learning <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Mapping">Mapping <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Policy Analysis">Policy Analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Public Finance">Public Finance <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Public Health">Public Health <span class="quarto-category-count">(8)</span></div><div class="category" data-category="Resource Allocations">Resource Allocations <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Spatial Analysis">Spatial Analysis <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Text Mining">Text Mining <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Time Series">Time Series <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Visualization">Visualization <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div><div class="category" data-category="Health Disparity">Health Disparity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Machine Learning">Machine Learning <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Mapping">Mapping <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Policy Analysis">Policy Analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Public Finance">Public Finance <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Public Health">Public Health <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Resource Allocations">Resource Allocations <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Spatial Analysis">Spatial Analysis <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Text Mining">Text Mining <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Time Series">Time Series <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -218,6 +217,12 @@ window.Quarto = {
          <option value="listing-title" data-direction="asc">
           Title
         </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
          <option value="listing-author" data-direction="asc">
           Author
         </option>
@@ -229,151 +234,7 @@ window.Quarto = {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Visualization,Health Disparity,Public Health" data-listing-file-modified-sort="1727486609531" data-listing-reading-time-sort="5" data-listing-word-count-sort="933">
-<div class="thumbnail">
-<p><a href="./posts/Attacks on Healthcare/index.html" class="no-external"></a></p><a href="./posts/Attacks on Healthcare/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/Attacks on Healthcare/map.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/Attacks on Healthcare/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Attacks on Healthcare/index.html" class="no-external">Attacks on Healthcare</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Attacks on Healthcare/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Visualization'); return false;">
-Visualization
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Health Disparity'); return false;">
-Health Disparity
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Public Health'); return false;">
-Public Health
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Attacks on Healthcare/index.html" class="no-external">Trend of Attacks on Healthcare system with global scope</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/Attacks on Healthcare/index.html" class="no-external"></a></p><a href="./posts/Attacks on Healthcare/index.html" class="no-external">
-<div class="listing-author">
-Dohyo Jeong
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Public Health,Machine Learning,Time Series" data-listing-file-modified-sort="1727486468363" data-listing-reading-time-sort="2" data-listing-word-count-sort="242">
-<div class="thumbnail">
-<p><a href="./posts/Comparison of Response policy to COVID-19/index.html" class="no-external"></a></p><a href="./posts/Comparison of Response policy to COVID-19/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/Comparison of Response policy to COVID-19/smaple.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/Comparison of Response policy to COVID-19/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Comparison of Response policy to COVID-19/index.html" class="no-external">Comparison of Response policy to COVID-19</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Comparison of Response policy to COVID-19/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Public Health'); return false;">
-Public Health
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
-Machine Learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Time Series'); return false;">
-Time Series
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Comparison of Response policy to COVID-19/index.html" class="no-external">See Paper Presentation</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/Comparison of Response policy to COVID-19/index.html" class="no-external"></a></p><a href="./posts/Comparison of Response policy to COVID-19/index.html" class="no-external">
-<div class="listing-author">
-Dohyo Jeong
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Public Health,Spatial Analysis,Policy Analysis" data-listing-file-modified-sort="1727486477084" data-listing-reading-time-sort="2" data-listing-word-count-sort="202">
-<div class="thumbnail">
-<p><a href="./posts/Covid19 and Educational Polarization/index.html" class="no-external"></a></p><a href="./posts/Covid19 and Educational Polarization/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/Covid19 and Educational Polarization/p1.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/Covid19 and Educational Polarization/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Covid19 and Educational Polarization/index.html" class="no-external">Covid19 and Educational Polarization</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Covid19 and Educational Polarization/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Public Health'); return false;">
-Public Health
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Spatial Analysis'); return false;">
-Spatial Analysis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Policy Analysis'); return false;">
-Policy Analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Covid19 and Educational Polarization/index.html" class="no-external">Read Paper here</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/Covid19 and Educational Polarization/index.html" class="no-external"></a></p><a href="./posts/Covid19 and Educational Polarization/index.html" class="no-external">
-<div class="listing-author">
-Dohyo Jeong
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Text Mining,Public Health,Time Series" data-listing-file-modified-sort="1727486486394" data-listing-reading-time-sort="1" data-listing-word-count-sort="173">
-<div class="thumbnail">
-<p><a href="./posts/Digital Mass Hysteria over COVID-19 vaccine/index.html" class="no-external"></a></p><a href="./posts/Digital Mass Hysteria over COVID-19 vaccine/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/Digital Mass Hysteria over COVID-19 vaccine/trend.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/Digital Mass Hysteria over COVID-19 vaccine/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Digital Mass Hysteria over COVID-19 vaccine/index.html" class="no-external">Digital Mass Hysteria over COVID-19 vaccine</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Digital Mass Hysteria over COVID-19 vaccine/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Text Mining'); return false;">
-Text Mining
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Public Health'); return false;">
-Public Health
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Time Series'); return false;">
-Time Series
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Digital Mass Hysteria over COVID-19 vaccine/index.html" class="no-external">Read Paper here</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/Digital Mass Hysteria over COVID-19 vaccine/index.html" class="no-external"></a></p><a href="./posts/Digital Mass Hysteria over COVID-19 vaccine/index.html" class="no-external">
-<div class="listing-author">
-Dohyo Jeong
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Machine Learning,Public Health,Resource Allocations" data-listing-file-modified-sort="1727486242987" data-listing-reading-time-sort="2" data-listing-word-count-sort="238">
+<div class="quarto-post image-right" data-index="0" data-categories="Machine Learning,Public Health,Resource Allocations" data-listing-date-sort="1713157200000" data-listing-file-modified-sort="1727494552058" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="238">
 <div class="thumbnail">
 <p><a href="./posts/Emergency Medical Services/index.html" class="no-external"></a></p><a href="./posts/Emergency Medical Services/index.html" class="no-external">
 <p><img loading="lazy" src="./posts/Emergency Medical Services/smaple.jpg" class="thumbnail-image"></p>
@@ -402,14 +263,17 @@ Resource Allocations
 </div>
 </div>
 <div class="metadata">
-<p><a href="./posts/Emergency Medical Services/index.html" class="no-external"></a></p><a href="./posts/Emergency Medical Services/index.html" class="no-external">
+<a href="./posts/Emergency Medical Services/index.html" class="no-external">
+<div class="listing-date">
+Apr 15, 2024
+</div>
 <div class="listing-author">
 Dohyo Jeong
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="Spatial Analysis,Machine Learning,Public Finance" data-listing-file-modified-sort="1727486261924" data-listing-reading-time-sort="2" data-listing-word-count-sort="264">
+<div class="quarto-post image-right" data-index="1" data-categories="Spatial Analysis,Machine Learning,Public Finance" data-listing-date-sort="1713157200000" data-listing-file-modified-sort="1727494564442" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="264">
 <div class="thumbnail">
 <p><a href="./posts/Health Expenditure/index.html" class="no-external"></a></p><a href="./posts/Health Expenditure/index.html" class="no-external">
 <p><img loading="lazy" src="./posts/Health Expenditure/smaple.jpg" class="thumbnail-image"></p>
@@ -438,86 +302,56 @@ Public Finance
 </div>
 </div>
 <div class="metadata">
-<p><a href="./posts/Health Expenditure/index.html" class="no-external"></a></p><a href="./posts/Health Expenditure/index.html" class="no-external">
+<a href="./posts/Health Expenditure/index.html" class="no-external">
+<div class="listing-date">
+Apr 15, 2024
+</div>
 <div class="listing-author">
 Dohyo Jeong
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="Spatial Analysis,Health Disparity,Machine Learning" data-listing-file-modified-sort="1727486282439" data-listing-reading-time-sort="2" data-listing-word-count-sort="245">
+<div class="quarto-post image-right" data-index="2" data-categories="Text Mining,Public Health,Time Series" data-listing-date-sort="1696050000000" data-listing-file-modified-sort="1727494538534" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="173">
 <div class="thumbnail">
-<p><a href="./posts/Regional Disparity in Uninsurance Rate/index.html" class="no-external"></a></p><a href="./posts/Regional Disparity in Uninsurance Rate/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/Regional Disparity in Uninsurance Rate/smaple.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/Regional Disparity in Uninsurance Rate/index.html" class="no-external"></a></p>
+<p><a href="./posts/Digital Mass Hysteria over COVID-19 vaccine/index.html" class="no-external"></a></p><a href="./posts/Digital Mass Hysteria over COVID-19 vaccine/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/Digital Mass Hysteria over COVID-19 vaccine/trend.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/Digital Mass Hysteria over COVID-19 vaccine/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/Regional Disparity in Uninsurance Rate/index.html" class="no-external">Regional Disparity in Uninsurance Rate</a>
+<a href="./posts/Digital Mass Hysteria over COVID-19 vaccine/index.html" class="no-external">Digital Mass Hysteria over COVID-19 vaccine</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/Regional Disparity in Uninsurance Rate/index.html" class="no-external"></a>
+<a href="./posts/Digital Mass Hysteria over COVID-19 vaccine/index.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Spatial Analysis'); return false;">
-Spatial Analysis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Health Disparity'); return false;">
-Health Disparity
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
-Machine Learning
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Regional Disparity in Uninsurance Rate/index.html" class="no-external">See Paper Presentation</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/Regional Disparity in Uninsurance Rate/index.html" class="no-external"></a></p><a href="./posts/Regional Disparity in Uninsurance Rate/index.html" class="no-external">
-<div class="listing-author">
-Dohyo Jeong
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="Mapping,Public Health,Resource Allocations" data-listing-file-modified-sort="1727486513309" data-listing-reading-time-sort="2" data-listing-word-count-sort="349">
-<div class="thumbnail">
-<p><a href="./posts/Road Traffic Crashes and Ambulance Responses/index.html" class="no-external"></a></p><a href="./posts/Road Traffic Crashes and Ambulance Responses/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/Road Traffic Crashes and Ambulance Responses/smaple.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/Road Traffic Crashes and Ambulance Responses/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Road Traffic Crashes and Ambulance Responses/index.html" class="no-external">Road Traffic Crashes and Ambulance Responses</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Road Traffic Crashes and Ambulance Responses/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Mapping'); return false;">
-Mapping
+<div class="listing-category" onclick="window.quartoListingCategory('Text Mining'); return false;">
+Text Mining
 </div>
 <div class="listing-category" onclick="window.quartoListingCategory('Public Health'); return false;">
 Public Health
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Resource Allocations'); return false;">
-Resource Allocations
+<div class="listing-category" onclick="window.quartoListingCategory('Time Series'); return false;">
+Time Series
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/Road Traffic Crashes and Ambulance Responses/index.html" class="no-external">Read Paper</a>
+<a href="./posts/Digital Mass Hysteria over COVID-19 vaccine/index.html" class="no-external">Read Paper here</a>
 </div>
 </div>
 <div class="metadata">
-<p><a href="./posts/Road Traffic Crashes and Ambulance Responses/index.html" class="no-external"></a></p><a href="./posts/Road Traffic Crashes and Ambulance Responses/index.html" class="no-external">
+<a href="./posts/Digital Mass Hysteria over COVID-19 vaccine/index.html" class="no-external">
+<div class="listing-date">
+Sep 30, 2023
+</div>
 <div class="listing-author">
 Dohyo Jeong
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="Public Health,Resource Allocations,Spatial Analysis" data-listing-file-modified-sort="1727486523317" data-listing-reading-time-sort="2" data-listing-word-count-sort="235">
+<div class="quarto-post image-right" data-index="3" data-categories="Public Health,Resource Allocations,Spatial Analysis" data-listing-date-sort="1696050000000" data-listing-file-modified-sort="1727494615385" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="235">
 <div class="thumbnail">
 <p><a href="./posts/TB Treatment Facility Distribution and Accessibility/index.html" class="no-external"></a></p><a href="./posts/TB Treatment Facility Distribution and Accessibility/index.html" class="no-external">
 <p><img loading="lazy" src="./posts/TB Treatment Facility Distribution and Accessibility/smaple.jpg" class="thumbnail-image"></p>
@@ -546,14 +380,95 @@ Spatial Analysis
 </div>
 </div>
 <div class="metadata">
-<p><a href="./posts/TB Treatment Facility Distribution and Accessibility/index.html" class="no-external"></a></p><a href="./posts/TB Treatment Facility Distribution and Accessibility/index.html" class="no-external">
+<a href="./posts/TB Treatment Facility Distribution and Accessibility/index.html" class="no-external">
+<div class="listing-date">
+Sep 30, 2023
+</div>
 <div class="listing-author">
 Dohyo Jeong
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="Spatial Analysis,Public Health,Policy Analysis" data-listing-file-modified-sort="1727486532877" data-listing-reading-time-sort="2" data-listing-word-count-sort="360">
+<div class="quarto-post image-right" data-index="4" data-categories="Public Health,Spatial Analysis,Policy Analysis" data-listing-date-sort="1677304800000" data-listing-file-modified-sort="1727494519258" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="202">
+<div class="thumbnail">
+<p><a href="./posts/Covid19 and Educational Polarization/index.html" class="no-external"></a></p><a href="./posts/Covid19 and Educational Polarization/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/Covid19 and Educational Polarization/p1.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/Covid19 and Educational Polarization/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Covid19 and Educational Polarization/index.html" class="no-external">Covid19 and Educational Polarization</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Covid19 and Educational Polarization/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Public Health'); return false;">
+Public Health
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Spatial Analysis'); return false;">
+Spatial Analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Policy Analysis'); return false;">
+Policy Analysis
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Covid19 and Educational Polarization/index.html" class="no-external">Read Paper here</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Covid19 and Educational Polarization/index.html" class="no-external">
+<div class="listing-date">
+Feb 25, 2023
+</div>
+<div class="listing-author">
+Dohyo Jeong
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="Mapping,Public Health,Resource Allocations" data-listing-date-sort="1676440800000" data-listing-file-modified-sort="1727494598922" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="349">
+<div class="thumbnail">
+<p><a href="./posts/Road Traffic Crashes and Ambulance Responses/index.html" class="no-external"></a></p><a href="./posts/Road Traffic Crashes and Ambulance Responses/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/Road Traffic Crashes and Ambulance Responses/smaple.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/Road Traffic Crashes and Ambulance Responses/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Road Traffic Crashes and Ambulance Responses/index.html" class="no-external">Road Traffic Crashes and Ambulance Responses</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Road Traffic Crashes and Ambulance Responses/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Mapping'); return false;">
+Mapping
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Public Health'); return false;">
+Public Health
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Resource Allocations'); return false;">
+Resource Allocations
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Road Traffic Crashes and Ambulance Responses/index.html" class="no-external">Read Paper</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Road Traffic Crashes and Ambulance Responses/index.html" class="no-external">
+<div class="listing-date">
+Feb 15, 2023
+</div>
+<div class="listing-author">
+Dohyo Jeong
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="Spatial Analysis,Public Health,Policy Analysis" data-listing-date-sort="1676440800000" data-listing-file-modified-sort="1727494632084" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="360">
 <div class="thumbnail">
 <p><a href="./posts/Tuberculosis Case Mapping/index.html" class="no-external"></a></p><a href="./posts/Tuberculosis Case Mapping/index.html" class="no-external">
 <p><img loading="lazy" src="./posts/Tuberculosis Case Mapping/tbmap.jpg" class="thumbnail-image"></p>
@@ -582,7 +497,88 @@ Policy Analysis
 </div>
 </div>
 <div class="metadata">
-<p><a href="./posts/Tuberculosis Case Mapping/index.html" class="no-external"></a></p><a href="./posts/Tuberculosis Case Mapping/index.html" class="no-external">
+<a href="./posts/Tuberculosis Case Mapping/index.html" class="no-external">
+<div class="listing-date">
+Feb 15, 2023
+</div>
+<div class="listing-author">
+Dohyo Jeong
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="Spatial Analysis,Health Disparity,Machine Learning" data-listing-date-sort="1664514000000" data-listing-file-modified-sort="1727494583998" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="245">
+<div class="thumbnail">
+<p><a href="./posts/Regional Disparity in Uninsurance Rate/index.html" class="no-external"></a></p><a href="./posts/Regional Disparity in Uninsurance Rate/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/Regional Disparity in Uninsurance Rate/smaple.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/Regional Disparity in Uninsurance Rate/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Regional Disparity in Uninsurance Rate/index.html" class="no-external">Regional Disparity in Uninsurance Rate</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Regional Disparity in Uninsurance Rate/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Spatial Analysis'); return false;">
+Spatial Analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Health Disparity'); return false;">
+Health Disparity
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
+Machine Learning
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Regional Disparity in Uninsurance Rate/index.html" class="no-external">See Paper Presentation</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Regional Disparity in Uninsurance Rate/index.html" class="no-external">
+<div class="listing-date">
+Sep 30, 2022
+</div>
+<div class="listing-author">
+Dohyo Jeong
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-categories="Public Health,Machine Learning,Time Series" data-listing-date-sort="1653973200000" data-listing-file-modified-sort="1727494502327" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="242">
+<div class="thumbnail">
+<p><a href="./posts/Comparison of Response policy to COVID-19/index.html" class="no-external"></a></p><a href="./posts/Comparison of Response policy to COVID-19/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/Comparison of Response policy to COVID-19/smaple.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/Comparison of Response policy to COVID-19/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Comparison of Response policy to COVID-19/index.html" class="no-external">Comparison of Response policy to COVID-19</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Comparison of Response policy to COVID-19/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Public Health'); return false;">
+Public Health
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
+Machine Learning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Time Series'); return false;">
+Time Series
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Comparison of Response policy to COVID-19/index.html" class="no-external">See Paper Presentation</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Comparison of Response policy to COVID-19/index.html" class="no-external">
+<div class="listing-date">
+May 31, 2022
+</div>
 <div class="listing-author">
 Dohyo Jeong
 </div>
